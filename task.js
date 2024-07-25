@@ -23,16 +23,19 @@ let newtask = document.getElementById('tache').value;
         // Création d'un bouton valider
         let validBtn = document.createElement("button");
         validBtn.textContent = "Valider";
+        validBtn.className = "validBtn"
         li.appendChild(validBtn);
 
         // Création d'un bouton modifier
         let modifBtn = document.createElement ('button');
         modifBtn.textContent = "Modifié"
+        modifBtn.className = "modifBtn"
         li.appendChild(modifBtn);
 
         // Création d'un bouton supprimer
         let supBtn = document.createElement ("button");
         supBtn.textContent ="Supprimé";
+        supBtn.className = "supBtn"
         li.appendChild(supBtn); 
         
         // Validation

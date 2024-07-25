@@ -14,28 +14,31 @@ let newtask = document.getElementById('tache').value;
         // permet d'afficher la liste dans chaque li avec le contenu
         //génère un li dans le ul
         let li = document.createElement('li');
-        li.appendChild(content);
-        //ajoute le li après chaque action sur le bouton valider    
-        let ajouter = liste.appendChild(li);
-        document.querySelector('#tache').value = "";
+        let p = document.createElement('p');
+        p.className = "tache";
+        p.appendChild(content);
+        //ajoute le <li> et un <p> après chaque action sur le bouton valider    
+        liste.appendChild(li);
+        li.appendChild(p);
+        document.querySelector('#tache').value = ""; //vide le formulaire
 
-
+        
         // Création d'un bouton valider
         let validBtn = document.createElement("button");
         validBtn.textContent = "Valider";
-        validBtn.className = "validBtn"
+        validBtn.className = "validBtn";
         li.appendChild(validBtn);
 
         // Création d'un bouton modifier
         let modifBtn = document.createElement ('button');
-        modifBtn.textContent = "Modifié"
-        modifBtn.className = "modifBtn"
+        modifBtn.textContent = "Modifié";
+        modifBtn.className = "modifBtn";
         li.appendChild(modifBtn);
 
         // Création d'un bouton supprimer
         let supBtn = document.createElement ("button");
         supBtn.textContent ="Supprimé";
-        supBtn.className = "supBtn"
+        supBtn.className = "supBtn";
         li.appendChild(supBtn); 
         
         // Validation
@@ -48,17 +51,14 @@ let newtask = document.getElementById('tache').value;
         })
         // Modification
         modifBtn.addEventListener('click', () =>{
-            
-            let modif = newtask;
-            prompt ("Modifier vôtre tache:");
-            if (modif == "") {
-                alert ("Vous avez saisi la même tache.")
-            }else{
-                li.appendChild(modif);
-            }
-            
-        })
+            //document.querySelector('p').value = ""
+            let modif = prompt ("Modifier vôtre tache:");
+            console.log(modif);
+            console.log(p.textContent)
+            p.textContent = modif;
 
+        })
     } 
 })
 
+z

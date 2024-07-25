@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:after, *:before {
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  *::first-letter {
+    text-transform: capitalize;
+  }
+
+body {
+    text-align: center;
+}
+
+main {
+  border: 1px solid rgb(253, 241, 69);
+  box-shadow: 1px 2px 1px 2px rgb(0, 0, 0);
+  width: 40%;
+  height: 800px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: hsl(60, 100%, 68%);
+}
+
+h1 {
+    font-size: 3em;
+    margin: 20px;
+}
+
+section, article {
+    margin: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 10px;
+}
+
+ul {
+  list-style: none;
+}

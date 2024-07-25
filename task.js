@@ -1,4 +1,5 @@
-let liste = document.querySelector('ul')    //recuperer ul
+let liste = document.querySelector('ul')
+let listeFini = document.querySelector('.listeFini')    //recuperer ul
 console.log(liste);
 
 let valider = document.getElementById('valider').addEventListener ('click',()=>{   
@@ -44,6 +45,11 @@ let newtask = document.getElementById('tache').value;
         // Validation
         validBtn.addEventListener('click', () =>{
             li.style.textDecoration = "line-through";
+            console.log(listeFini)
+            listeFini.appendChild (li);
+            validBtn.style.display ="none";
+            modifBtn.style.display ="none";
+            
         })
         // Suppression
         supBtn.addEventListener('click', ()=>{
@@ -57,8 +63,8 @@ let newtask = document.getElementById('tache').value;
             console.log(p.textContent)
             p.textContent = modif;
 
+
+            
         })
     } 
 })
-
-z
